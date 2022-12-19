@@ -1,8 +1,10 @@
 const express = require('express')
 const app = express()
 
+app.use(express.static(__dirname + '/public'));
+
 app.get('/', (req, res) =>{
-    res.sendFile(__dirname + '/Workshop_4/main_page.html')
+    res.sendFile(__dirname + '/main_page.html')
 })
 
 app.get("*", (req, res) => {
