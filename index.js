@@ -12,7 +12,7 @@ app.get('/', (req, res) =>{
 })
 
 app.get("*", (req, res) => {
-    res.send('ไม่พบหน้าที่คุณร้องขอ Error: 404 Page Not Found')
+    res.sendFile(__dirname + '/error404_page.html')
 })
 
 app.listen(3000, () => {
